@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const cors = require('cors') 
+const cors = require("cors")
 const figlet = require('figlet')
 const PORT = 8000
 
@@ -50,4 +50,3 @@ app.listen(process.env.PORT || PORT, () => {
     console.log(`The server is now running on port ${8000}. 
     Betta go catch it!`)
 });
-

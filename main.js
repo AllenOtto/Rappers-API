@@ -7,10 +7,10 @@ async function getRapperInfo() {
         const data = await res.json()
 
         document.querySelector('#stage-name').innerText = data.stageName
-        document.querySelector('#age').innerText = data.stageName
-        document.querySelector('birth-name').innerText = data.birthName
-        document.querySelector('birth-location').innerText = data.birthLocation
+        document.querySelector('#age').innerText = data.age
+        document.querySelector('#birth-name').innerText = data.birthName
+        document.querySelector('#birth-location').innerText = data.birthLocation
     } catch(e) {
-        console.log(`Error: Couldn't resolve data ${e}`)
+        console.log(e)
     }
 }
