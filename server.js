@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express()
+const cors = require('cors') 
 const figlet = require('figlet')
 const PORT = 8000
+
+app.use(cors())
 
 const rappers = {
     "kali": {
@@ -30,9 +33,9 @@ const rappers = {
     }
 }
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-})
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname + '/index.html')
+// })
 
 app.get('/api/:rapper', (req, res) => {
     const rapperName = req.params.rapper.toLowerCase()
