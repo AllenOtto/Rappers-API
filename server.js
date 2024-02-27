@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 app.get('/api/:rapper', (req, res) => {
     const rapperName = req.params.rapper.toLowerCase()
     if(rappers[rapperName]) {
-        res.json(rappers[rapperName])
+        res.json(rappers[rapperName] )
     } else {
         res.json('Rapper not in our Database');
     }
